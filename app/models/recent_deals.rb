@@ -1,0 +1,2 @@
+class RecentDeals < ApplicationRecord
+end

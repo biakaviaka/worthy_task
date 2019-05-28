@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/recent_deals/:carat/:shape/:color/:clarity', to: 'recent_deals#predict_price', as: 'predict_price'
+
+  root to: "recent_deals#calculate"
 end

@@ -1,1 +1,52 @@
-Calculation...
+<form>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="container m-1 p-3 bordered">
+          <input type="text" class="form-control" id="inputCarat" aria-describedby="caratTip" placeholder="Enter diamond carat size">
+          <small id="caratTip" class="form-text text-muted">Tip: Most common diamond carat size is 0.9CT</small>
+        </div>
+        <div class="attr_container container m-1 p-3 bordered">
+          <label>Diamond Shape:</label>
+          <div class="d-flex">
+            <% SHAPE.each do |attr| %>
+              <div class="item_attr mx-auto shape_attr"><%= attr %></div>
+            <% end %>
+          </div>
+        </div>
+        <div class="attr_container container m-1 p-3 bordered">
+          <label>Color:</label>
+          <div class="d-flex">
+            <% COLOR.each do |attr| %>
+              <div class="item_attr mx-auto color_attr"><%= attr %></div>
+            <% end %>
+          </div>
+          <small id="colorTip" class="form-text text-muted">Tip: Most common diamond color is H</small>
+        </div>
+        <div class="attr_container container m-1 p-3 bordered">
+          <label>Clarity:</label>
+          <div class="d-flex">
+            <% CLARITY.each do |attr| %>
+              <div class="item_attr mx-auto clarity_attr"><%= attr %></div>
+            <% end %>
+          </div>
+          <small id="colorTip" class="form-text text-muted">Tip: Most common diamond clarity is SI2</small>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="container m-1 p-3 bordered">
+          <div class="row">
+            <div class="col-sm-8">
+              <input type="text" class="form-control float-left" id="inputPrice" readonly>
+            </div>
+            <div class="col-sm-4">
+              <button type="button" class="btn btn-primary float-left">Calculate</button>
+            </div>
+            <div class="col-sm-12"></div>
+          </div>
+          <small id="colorTip" class="form-text text-muted">Tip: Describe your diamond to get market value</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.3">
+  <Header/>
+  <DataDictionary>
+    <DataField name="carat_weight" optype="continuous" dataType="double"/>
+    <DataField name="clarity" optype="categorical" dataType="string">
+      <Value value="I2"/>
+      <Value value="I1"/>
+      <Value value="VS1"/>
+      <Value value="SI1"/>
+      <Value value="VVS2"/>
+      <Value value="IF"/>
+      <Value value="SI2"/>
+      <Value value="VVS1"/>
+      <Value value="I3"/>
+      <Value value="FL"/>
+    </DataField>
+    <DataField name="color" optype="categorical" dataType="string">
+      <Value value="I"/>
+      <Value value="L"/>
+      <Value value="D"/>
+      <Value value="E"/>
+      <Value value="K"/>
+      <Value value="M-Z"/>
+      <Value value="F"/>
+      <Value value="J"/>
+      <Value value="G"/>
+      <Value value="Fancy"/>
+    </DataField>
+    <DataField name="shape" optype="categorical" dataType="string">
+      <Value value="Marquise"/>
+      <Value value="Princess"/>
+      <Value value="Cushion"/>
+      <Value value="Emerald"/>
+      <Value value="Other"/>
+    </DataField>
+  </DataDictionary>
+  <RegressionModel functionName="regression">
+    <MiningSchema>
+      <MiningField name="carat_weight"/>
+      <MiningField name="clarity"/>
+      <MiningField name="color"/>
+      <MiningField name="shape"/>
+    </MiningSchema>
+    <RegressionTable intercept="-18491.128020777276">
+      <NumericPredictor name="carat_weight" coefficient="18630.82701948806"/>
+      <CategoricalPredictor name="clarity" value="I2" coefficient="-14063.33936622565"/>
+      <CategoricalPredictor name="clarity" value="I1" coefficient="-6041.6241612768235"/>
+      <CategoricalPredictor name="color" value="I" coefficient="-4197.599644068841"/>
+      <CategoricalPredictor name="clarity" value="VS1" coefficient="1505.6491365461554"/>
+      <CategoricalPredictor name="color" value="L" coefficient="-7449.284449010615"/>
+      <CategoricalPredictor name="shape" value="Marquise" coefficient="-7954.768263815956"/>
+      <CategoricalPredictor name="clarity" value="SI1" coefficient="-428.98268492014734"/>
+      <CategoricalPredictor name="color" value="D" coefficient="10784.648697231498"/>
+      <CategoricalPredictor name="shape" value="Princess" coefficient="-4448.731177206911"/>
+      <CategoricalPredictor name="color" value="E" coefficient="1699.8652457337496"/>
+      <CategoricalPredictor name="color" value="K" coefficient="-11857.609308436717"/>
+      <CategoricalPredictor name="shape" value="Cushion" coefficient="-11291.419049117829"/>
+      <CategoricalPredictor name="color" value="M-Z" coefficient="-41973.90392846261"/>
+      <CategoricalPredictor name="color" value="F" coefficient="3219.014244474219"/>
+      <CategoricalPredictor name="clarity" value="VVS2" coefficient="2331.5785918094257"/>
+      <CategoricalPredictor name="clarity" value="IF" coefficient="11.727176995912671"/>
+      <CategoricalPredictor name="clarity" value="SI2" coefficient="-1390.707367798868"/>
+      <CategoricalPredictor name="shape" value="Emerald" coefficient="-4292.5032775974305"/>
+      <CategoricalPredictor name="color" value="J" coefficient="-4049.7458304390693"/>
+      <CategoricalPredictor name="color" value="G" coefficient="1930.7162979248028"/>
+      <CategoricalPredictor name="shape" value="Other" coefficient="3767.6473106649446"/>
+      <CategoricalPredictor name="clarity" value="VVS1" coefficient="34685.381113520474"/>
+      <CategoricalPredictor name="color" value="Fancy" coefficient="4067.3728988983885"/>
+      <CategoricalPredictor name="clarity" value="I3" coefficient="-5319.644136007522"/>
+      <CategoricalPredictor name="clarity" value="FL" coefficient="227.81308272251317"/>
+    </RegressionTable>
+  </RegressionModel>
+</PMML>

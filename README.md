@@ -29,6 +29,10 @@ Due to time constraints, I used the technologies I worked with earlier
 
 I used MySQLite to store data because it easy to implement (default DB in Rails) and enough for my purposes. Dataset was scraped from worthy.com (lib/data_scraper.rb). 
 
+I assumed the variables (shape, color, clarity and carat weight) are independent and price is continuous variable. 
+Сonsidering all of the above I used multivariate regression to predict price based on recent deals dataset. I decided to use  <a href="https://github.com/ankane/eps">Eps ruby gem</a> because it simple and not required prior knowledge of machine learning.
+
+
 
 
 

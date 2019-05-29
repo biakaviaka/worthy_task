@@ -32,6 +32,8 @@ I used MySQLite to store data because it easy to implement (default DB in Rails)
 I assumed the variables (shape, color, clarity and carat weight) are independent and price is continuous variable. 
 Сonsidering all of the above I used multivariate regression to predict price based on recent deals dataset. I decided to use  <a href="https://github.com/ankane/eps">Eps ruby gem</a> because it simple and not required prior knowledge of machine learning.
 
+After a series of tests, I saw that the calculator sometimes returns negative values. In this case, I return an error message.
+
 
 
 

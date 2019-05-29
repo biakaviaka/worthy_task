@@ -11,7 +11,8 @@ class RecentDealsController < ApplicationController
     new_deal.clarity = params[:clarity]
 
     price = PriceModel.predict(new_deal)
+    price =  price > 0 ? "$#{price.to_i}" : "error"
 
-    render json: {price: "$#{price.to_i}"}
+    render json: {price: price}
   end
 end
